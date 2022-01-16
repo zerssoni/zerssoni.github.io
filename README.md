@@ -1,5 +1,6 @@
 ![Zerssoni Logo](zerssoni_avatar.png)
-# Zerssoni's GitHub-page
+% Zerssoni's GitHub-page
+# Welcome!
 Welcome to Zerssoni's GitHub-page! There isn't a lot to see out here,
 but at least there is something!
 Here are some useful links to me and my band's pages:
