@@ -1,5 +1,5 @@
-![Zerssoni Logo](zerssoni_avatar.png)
 % Zerssoni's GitHub-page
+![Zerssoni Logo](zerssoni_avatar.png)
 # Welcome!
 Welcome to Zerssoni's GitHub-page! There isn't a lot to see out here,
 but at least there is something!
