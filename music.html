@@ -3,31 +3,11 @@
 <head>
 <link rel="stylesheet" href="styles.css">
 <style> 
-#myDIV {
-  padding: 0px;
-  background: black;
-  color: white;
-  	font-family: Trajan;
-  font-size: 100%;
-  font-weight: bold;
-  align-items: center;
-  display: flex;
-}
-
-#myDIV div {
-	flex: 1;
-	background-color: black;
-	padding: 36px;
-	transition: background-color 0.5s ease-out 0ms;
-	user-select: none;
-	display: block;
-	text-align: center;
-}
 
 #myDIV div2 {
 	flex: 1;
 	background-color: darkgrey;
-	padding: 20px;
+	padding: 20px;s
 	transition: background-color 0.5s ease-out 0ms;
 	user-select: none;
 	display: block;
@@ -36,10 +16,6 @@
 
 a:link {
 text-decoration: none;
-}
-
-#myDIV div:hover {
-  background-color: grey;
 }
 
 #movingThing {
@@ -128,23 +104,25 @@ padding: 20px 20px 20px;
 </head>
 <body>
 
-<div id="myDIV">
-	<img class="padding" src="everture_logo.png" width="7%">
-	<a href="index.html"><div style="color:white">HOME</div></a>
-		<a href="index.html"><div style="color:white">BAND</div></a>
-	<a href="index.html"><div style="color:white">STORY</div></a>
-		<a href="music.html"><div style="color:white">MUSIC</div></a>
-	<a href="https://www.facebook.com/evertureband/events"><div style="color:white">GIGS</div></a>
-	<a href="https://www.facebook.com/evertureband"><div style="color:white">FACEBOOK</div></a>
-	<a href="https://www.instagram.com/evertureband"><div style="color:white">INSTAGRAM</div></a>
-	<div2 style="background-color:black">
-</div>
+
+<ul>
+	<li><img class="toplogo" src="everture_logo.png" width="125px"></li>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="index.html">Band</a></li>
+	<li><a href="music.html">Listen</a></li>
+	<li><a href="https://www.facebook.com/evertureband/events">Gigs</a></li>
+	<li><a href="index.html">Story</a></li>
+	<li><a href="https://www.facebook.com/evertureband">Facebook</a></li>
+	<li><a href="https://www.instagram.com/evertureband">Instagram</a></li>
+</ul>
+
+
 <!---
 <div id="myDIV">
 	<div2>NEWS: Debut album 'Emerge' OUT NOW!</div>
 </div>
 --->
-</div>
+<div id="content">
 
 <h1>LISTEN TO OUR MUSIC</h1>
 <p>Spotify</p>
@@ -159,7 +137,11 @@ padding: 20px 20px 20px;
 <br>
 <p>Links to other services coming soon!</p>
 
+
 <div id="myDIV">
-	<div2 style="background-color:black">© EVERTURE 2021</div>
+	<div>© EVERTURE 2021
+</div>
+	
+	</div>
 </body>
 </html>

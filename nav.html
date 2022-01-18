@@ -5,10 +5,18 @@
 <title>WE ARE EVERTURE - Modern Melodic Metal from Kokkola, Finland</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <style> 
+#myDIV {
+  padding: 0px;
+  background: black;
+  color: white;
+  	font-family: Trajan;
+  font-size: 100%;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+}
 
-<!--
-#CenterDIV
-{
+        #CenterDIV {
             position: fixed;
             top: 0;
             left: 0;
@@ -18,6 +26,35 @@
             padding-top: 100px;
             display: none;
 			font-family: arial;
+        }
+		
+
+#myDIV div {
+	flex: 1;
+	background-color: black;
+	padding: 36px;
+	transition: background-color 0.5s ease-out 0ms;
+	user-select: none;
+	display: block;
+	text-align: center;
+}
+
+#myDIV div2 {
+	flex: 1;
+	background-color: darkgrey;
+	padding: 20px;
+	transition: background-color 0.5s ease-out 0ms;
+	user-select: none;
+	display: block;
+	text-align: top-left;
+}
+
+a:link {
+text-decoration: none;
+}
+
+#myDIV div:hover {
+  background-color: grey;
 }
 
 #movingThing {
@@ -36,7 +73,11 @@
   align-items: center;
   display: flex;
 }
--->
+body {
+padding:0;
+margin:0;
+width:100%
+}
 
 @keyframes fadeoutanim {
   0%   {opacity: 1.0;}
@@ -62,17 +103,17 @@ padding: 5% 25% 5%;
 	
 .slide {
   width: 100%;
-  height: 760px;
+  height: 850px;
   overflow: hidden;
   position: relative;
   background-color: #000;
+  
 }
 
 .slide > div {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: 50% 40%;
   position: absolute;
   animation: slide 25s infinite;
   opacity: 0;
@@ -105,7 +146,7 @@ padding: 5% 25% 5%;
     transform: scale(1.2);
   }
 }
-<!--
+
         .divFloat {
             margin: 0 10px;
             background-color: #3a3b3c;
@@ -161,7 +202,6 @@ padding: 5% 25% 5%;
             border-top-left-radius: 10px 20px;
             cursor: pointer;
         }
-		-->
 
 .smalltext {
 font-weight: normal;
@@ -172,46 +212,26 @@ font-style: italic;
 <body>
 
 <ul>
-	<li><img class="toplogo" src="everture_logo.png" width="125px"></li>
+	<li><img class="padding" src="everture_logo.png" width="135px"></li>
 	<li><a href="index.html">Home</a></li>
 	<li><a href="index.html">Band</a></li>
-	<li><a href="music.html">Listen</a></li>
-	<li><a href="https://www.facebook.com/evertureband/events">Gigs</a></li>
+	<li><a href="index.html">Listen</a></li>
+	<li><a href="index.html">Gigs</a></li>
 	<li><a href="index.html">Story</a></li>
-	<li><a href="https://www.facebook.com/evertureband">Facebook</a></li>
-	<li><a href="https://www.instagram.com/evertureband">Instagram</a></li>
+	<li><a href="index.html">Facebook</a></li>
+	<li><a href="index.html">Instagram</a></li>
 </ul>
 
-<div id="content">
-<div class="slide">
-  <div style="background-image:url(band.jpg)"></div>
-  <div style="background-image:url(loose.jpg)"></div>
-  <div style="background-image:url(jeppis.jpg)"></div>
-  <div style="background-image:url(band.jpg)"></div>
-  <div style="background-image:url(loose.jpg)"></div>
-</div>
-</div>
-
-<div id="myDIV">
-	<div>© EVERTURE 2021</div>
-</div>
-
-<!--
-<div id="CenterDIV">
-    <div class="divFloat">
-      <input type="button" id="btClose" class="btClose" value="X" />
-      
-	  <h1>NEWS</h1>
-	  <h2>Debut album 'Emerge' in stores now!</h1>
-	  <p class="smalltext">16.1.2022</p>
-	  <img class="padding_and_center" src="emerge.jpg" width="50%">
-	  <p>Our debut album Emerge is now available everywhere! Links are coming 
-	  to this website in the future. Meanwhile you can search online for 
-	  "everture emerge album" and find your preferred store yourself.
-	  Get your modern metal fix and purchase your copy of Emerge today!</p>
-    </div>
-</div>
--->
-
 </body>
+
+<script>
+  $(document).ready(function () {
+    $('#btClick').click(function () {
+      $('#CenterDIV').css('display', 'block');
+    });
+    $('#btClose').click(function () {
+      $('#CenterDIV').css('display', 'none');
+    });
+  });
+</script>
 </html>
