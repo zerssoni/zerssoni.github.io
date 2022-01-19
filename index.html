@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="styles.css">
 <title>WE ARE EVERTURE - Modern Melodic Metal from Kokkola, Finland</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <style> 
 
 <!--
@@ -59,13 +59,14 @@ padding: 20px 20px 20px;
 padding: 5% 25% 5%;
 
 }
-	
+
 .slide {
   width: 100%;
-  height: 760px;
+  height: 920px;
   overflow: hidden;
   position: relative;
   background-color: #000;
+  
 }
 
 .slide > div {
@@ -171,16 +172,29 @@ font-style: italic;
 </head>
 <body>
 
+<!-- NAV BAR
+<div id="nav-placeholder">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+END OF NAV BAR -->
+
+
 <ul>
 	<li><img class="toplogo" src="everture_logo.png" width="125px"></li>
 	<li><a href="index.html">Home</a></li>
-	<li><a href="index.html">Band</a></li>
+	<li><a href="band.html">Band</a></li>
 	<li><a href="music.html">Listen</a></li>
 	<li><a href="https://www.facebook.com/evertureband/events">Gigs</a></li>
 	<li><a href="index.html">Story</a></li>
 	<li><a href="https://www.facebook.com/evertureband">Facebook</a></li>
 	<li><a href="https://www.instagram.com/evertureband">Instagram</a></li>
 </ul>
+
 
 <div id="content">
 <div class="slide">

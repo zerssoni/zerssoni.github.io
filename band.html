@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<style> 
+
+#content
+{
+
+}
+
+#CenterDIV
+{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            width: 100%;
+            height: 100%;    
+            padding-top: 100px;
+            display: none;
+			font-family: arial;
+}
+
+        .divFloat {
+            margin: 0 10px;
+            background-color: #3a3b3c;
+            color: #000;
+            width: 75%;
+            height: 720px;
+			left: 10%;
+			position: fixed;
+            padding: 20px;
+            font: inherit;
+            border: solid 2px black;
+            -webkit-border-radius: 3px;
+            -webkit-box-orient: vertical;
+            -webkit-transition: 200ms -webkit-transform;
+            box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 
+            	0 2px 6px rgba(0, 0, 0, 0.15);
+            display: block;
+        }
+        .btClickHere {
+            font: inherit;
+            background-color: #587898;
+            color: #FFF;
+            border: solid 1px #587898;
+            -moz-border-radius: 0 7px 7px 0;
+            -webkit-border-radius: 0 7px 7px 0;
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+        }        
+        .btClose {
+            margin: 0 auto;
+            font: inherit;
+            font-weight: bold;
+            color: white;
+            border: none;
+            width: auto; 
+            float: right;
+            clear: both;
+            cursor: pointer; 
+			 background-color: #3a3b3c;
+			 font-size: 32px;
+        }
+
+.bandphoto
+{
+	background-color: 000;
+	width: 100%;
+	height: 900px;
+	float: left;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.bandphoto > div
+{
+	width: 20%;
+	height: 80%;
+	background-size: cover;
+	background-position: 50% 0%;
+	background-size: 2000px;
+	filter: saturate(0%);
+	filter: contrast(1);
+}
+
+.bandphoto > div:hover
+{
+	animation: scale_and_saturate 0.5s;
+	animation-fill-mode: forwards;
+	cursor: pointer;
+}
+
+.bandphoto > div:not(:hover)
+{
+	animation: descale_and_desaturate 0.5s;
+	animation-fill-mode: forwards;
+	cursor: normal;
+}
+
+@keyframes scale_and_saturate {
+  0% {
+	filter: saturate(0%);
+	transform: scale(1);
+  }
+  100% {
+	filter: saturate(100%);
+	transform: scale(1.1);
+  }
+}
+
+@keyframes descale_and_desaturate {
+  0% {
+	transform: scale(1.1);
+	filter: saturate(100%);
+	}
+  100% {
+	filter: saturate(0%);
+	transform: scale(1);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+	<li><img class="toplogo" src="everture_logo.png" width="125px"></li>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="band.html">Band</a></li>
+	<li><a href="music.html">Listen</a></li>
+	<li><a href="index.html">Gigs</a></li>
+	<li><a href="index.html">Story</a></li>
+	<li><a href="index.html">Facebook</a></li>
+	<li><a href="index.html">Instagram</a></li>
+</ul>
+
+<div id="content">
+<h1>WE ARE EVERTURE</h1>
+
+<!--
+<img class="bandphoto" style="background-image:url(bandphotos/matti_2_v2.jpg); background-position: 75% 50%;"></img>
+<img class="bandphoto" style="background-image:url(bandphotos/olli_1_v2.jpg)"></img>
+<img class="bandphoto" style="background-image:url(bandphotos/jere_1_v2.jpg)"></img>
+<img class="bandphoto" style="background-image:url(bandphotos/osku_2_v2.jpg)"></img>
+<img class="bandphoto" style="background-image:url(bandphotos/miko_2_v2.jpg)"></img>
+-->
+	
+<div class="bandphoto">
+	<div var membername = "Matti Hautakangas" onclick="toggleVisible()" style="background-image:url(bandphotos/matti_2_v2.jpg); background-position: 45% 0%;"></div>
+	<div var membername = "Olli Vuoti" onclick="toggleVisible()" style="background-image:url(bandphotos/olli_1_v2.jpg)"></div>
+	<div var membername = "Jere Kuokkanen" onclick="toggleVisible()" style="background-image:url(bandphotos/jere_1_v2.jpg)"></div>
+	<div var membername = "Oskari Niskala" onclick="toggleVisible()" style="background-image:url(bandphotos/osku_2_v2.jpg)"></div>
+	<div var membername = "Miko Kylmä" onclick="toggleVisible()" style="background-image:url(bandphotos/miko_2_v2.jpg)"></div>
+</div>
+
+
+<p>Click on an image above for information.</p>
+
+
+<div id="CenterDIV">
+    <div class="divFloat">
+	  <p class="btClose" onclick="toggleVisible()">X</p>
+	  <h1>JÄSENEN NIMI</h1>
+	  <h2>SOITIN</h1>
+	  <img class="padding_and_center" src="bandphotos/jere_1_v2.jpg" width="30%">
+	  <p>Tuonne oikealle lisätietoja.</p>
+    </div>
+</div>
+
+<div id="myDIV">
+	<div>© EVERTURE 2021</div>
+</div>
+
+</div>
+
+
+</body>
+<script>
+function toggleVisible() {
+  var x = document.getElementById("CenterDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</html>
