@@ -10,9 +10,10 @@ color: blue;
 }
 p {
 	font-family: Arial;
-	font-weight: bold;
+	font-weight: normal;
 	margin:30px;
 	color: white;
+	line-height: 1.5;
 }
 
 ul {

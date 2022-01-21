@@ -22,6 +22,24 @@
 			font-family: arial;
 }
 
+#moreInfo
+{
+			position: absolute;
+            top: 20%;
+            left: 0;
+			width: 33%;
+            height: 50%;    
+            padding-top: 100px;
+            display: none;
+			font-family: arial;
+}
+
+.details
+{
+	color: #000000;
+	animation: fade_in 1s ease-in;
+}
+
         .divFloat {
             margin: 0 10px;
             background-color: #3a3b3c;
@@ -71,7 +89,6 @@
 	height: 900px;
 	float: left;
 	display: flex;
-	flex-wrap: wrap;
 	overflow: hidden;
 }
 
@@ -84,6 +101,7 @@
 	background-size: 2000px;
 	filter: saturate(0%);
 	filter: contrast(1);
+	overflow: hidden;
 }
 
 .bandphoto > div:hover
@@ -92,6 +110,12 @@
 	animation-fill-mode: forwards;
 	cursor: pointer;
 }
+
+.bandphoto > div:click
+{
+	animation-fill-mode: forwards;
+}
+
 
 .bandphoto > div:not(:hover)
 {
@@ -111,6 +135,25 @@
   }
 }
 
+@keyframes scale_bandphoto {
+  0% {
+	width: 20%;
+  }
+  100% {
+	width: 1000%;
+  }
+}
+
+@keyframes scale_bandphoto_reverse {
+  0% {
+	width: 1000%;
+  }
+  100% {
+	width: 20%;
+  }
+}
+
+
 @keyframes descale_and_desaturate {
   0% {
 	transform: scale(1.1);
@@ -119,6 +162,15 @@
   100% {
 	filter: saturate(0%);
 	transform: scale(1);
+  }
+}
+
+@keyframes fade_in {
+  0% {
+	opacity: 0;
+  }
+  100% {
+	opacity: 1;
   }
 }
 
@@ -147,13 +199,13 @@
 <img class="bandphoto" style="background-image:url(bandphotos/osku_2_v2.jpg)"></img>
 <img class="bandphoto" style="background-image:url(bandphotos/miko_2_v2.jpg)"></img>
 -->
-	
-<div class="bandphoto">
-	<div var membername = "Matti Hautakangas" onclick="toggleVisible()" style="background-image:url(bandphotos/matti_2_v2.jpg); background-position: 45% 0%;"></div>
-	<div var membername = "Olli Vuoti" onclick="toggleVisible()" style="background-image:url(bandphotos/olli_1_v2.jpg)"></div>
-	<div var membername = "Jere Kuokkanen" onclick="toggleVisible()" style="background-image:url(bandphotos/jere_1_v2.jpg)"></div>
-	<div var membername = "Oskari Niskala" onclick="toggleVisible()" style="background-image:url(bandphotos/osku_2_v2.jpg)"></div>
-	<div var membername = "Miko Kylmä" onclick="toggleVisible()" style="background-image:url(bandphotos/miko_2_v2.jpg)"></div>
+
+<div class="bandphoto" id="photos">
+	<div id="masa" onclick="toggleVisible(id)" style="width: 20%; background-image:url(bandphotos/small/matti.jpg); background-position: 45% 0%;"></div>
+	<div id="olli" onclick="toggleVisible(id)" style="width: 20%; background-image:url(bandphotos/small/olli.jpg); background-position: 48% 0%;"></div>
+	<div id="jere" onclick="toggleVisible(id)" style="width: 20%; background-image:url(bandphotos/small/jere.jpg); background-position: 47% 0%;"></div>
+	<div id="osku" onclick="toggleVisible(id)" style="width: 20%; background-image:url(bandphotos/small/osku.jpg); background-position: 50% 0%;"></div>
+	<div id="miko" onclick="toggleVisible(id)" style="width: 20%; background-image:url(bandphotos/small/miko.jpg); background-position: 45% 0%;"></div>
 </div>
 
 
@@ -170,6 +222,69 @@
     </div>
 </div>
 
+<div id="moreInfo">
+	<div id="masa_info" style="display: none; animation: fade_in 5";>
+		<h1 class="details" style="padding-left: 0%">Matti Hautakangas</h1>
+		<h2 class="details" style="padding-left: 0%">Lead Guitar / Backing Vocals</h2>
+		<p class="details" style="padding-left: 0%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		</p>
+		<a class="details" style="padding-left: 5%" href="https://www.instagram.com/mattosedo">INSTAGRAM</a>
+	</div>
+	<div id="olli_info" style="display: none";>
+		<h1 class="details" style="padding-left: 10%">Olli Vuoti</h1>
+		<h2 class="details" style="padding-left: 10%">Drums</h2>
+		<p class="details" style="padding-left: 10%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		</p>
+		<a class="details" style="padding-left: 15%" href="https://www.instagram.com/ollikookos">INSTAGRAM</a>
+	</div>
+	<div id="jere_info" style="display: none";>
+		<h1 class="details" style="padding-left: 20%">Jere Kuokkanen</h1>
+		<h2 class="details" style="padding-left: 20%">Vocals</h2>
+		<p class="details" style="padding-left: 20%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		</p>
+		<a class="details" style="padding-left: 25%" href="https://www.instagram.com/zerssoni">INSTAGRAM</a>
+	</div>
+	<div id="osku_info" style="display: none";>
+		<h1 class="details" style="padding-left: 30%">Oskari Niskala</h1>
+		<h2 class="details" style="padding-left: 30%">Rhythm Guitar / Backing Vocals</h2>
+		<p class="details" style="padding-left: 30%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		</p>
+		<a class="details" style="padding-left: 35%" href="https://www.instagram.com/ozzkun">INSTAGRAM</a>
+	</div>
+	<div id="miko_info" style="display: none";>
+		<h1 class="details" style="padding-left: 40%">Miko Kylmä</h1>
+		<h2 class="details" style="padding-left: 40%">Bass</h2>
+		<p class="details" style="padding-left: 40%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+		</p>
+		<a class="details" style="padding-left: 45%" href="https://www.instagram.com/mikomalikas">INSTAGRAM</a>
+	</div>
+</div>
+
 <div id="myDIV">
 	<div>© EVERTURE 2021</div>
 </div>
@@ -179,13 +294,72 @@
 
 </body>
 <script>
-function toggleVisible() {
-  var x = document.getElementById("CenterDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+function toggleVisible()
+{
+  var moreinfo = document.getElementById("moreInfo");
+  var y = document.getElementById(arguments[0]);
+  var elems = document.getElementById("photos").children;
+  
+  		  for(var i=0; i < elems.length; i++)
+		  {
+		  elems[i].style.display = "block";
+		  }
+  
+
+  y.style.display = "block";
+
+	if(y.style.width === "20%")
+	{
+		y.style.animation = "scale_bandphoto 1s";
+		<!--y.style.animationFillMode = "forwards";-->
+		y.style.width = "1000%";
+		moreinfo.style.display = "block";
+
+		
+		if(arguments[0] == "masa")
+		{
+			document.getElementById("masa_info").style.display = "block";
+		}
+		else if(arguments[0] == "olli")
+		{
+			document.getElementById("olli_info").style.display = "block";
+		}
+		else if(arguments[0] == "jere")
+		{
+			document.getElementById("jere_info").style.display = "block";
+		}
+		else if(arguments[0] == "osku")
+		{
+			document.getElementById("osku_info").style.display = "block";
+		}
+		else if(arguments[0] == "miko")
+		{
+			document.getElementById("miko_info").style.display = "block";
+		}
+	}
+	else if (y.style.width === "1000%")
+	{
+		
+		<!--y.style.animation = "scale_bandphoto 1s";-->
+		<!--y.style.animationFillMode = "reverse";-->
+
+		y.style.animation = "scale_bandphoto_reverse 1s";
+		
+		y.style.width = "20%";
+		
+		  for(var i=0; i < elems.length; i++)
+		  {
+		  elems[i].style.display = "block";
+		  }
+		  		  
+		  document.getElementById("masa_info").style.display = "none";
+		  document.getElementById("olli_info").style.display = "none";
+		  document.getElementById("jere_info").style.display = "none";
+		  document.getElementById("osku_info").style.display = "none";
+		  document.getElementById("miko_info").style.display = "none";
+		  
+		  moreinfo.style.display = "none";
+	}
 }
 </script>
 </html>

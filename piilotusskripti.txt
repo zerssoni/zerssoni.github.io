@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+</style>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>Finding the largest number.</p>
+<p id="demo">DDDEE</p>
+<div style="width:20%; background-color:grey;" id="masa" onclick="find(id)">SEMMOSTA</div>
+
+<script>
+
+
+function find()
+{
+  var y = document.getElementById(arguments[0]);
+
+	if(y.style.width === "20%")
+	{
+		y.style.width = "50%";
+        var demo = document.getElementById("demo");
+        demo.style.display = "none";
+	}
+	else if (y.style.width === "50%")
+	{
+		y.style.width = "20%";
+        demo.style.display = "inline";
+	}
+} 
+
+</script>
+
+</body>
+</html>
