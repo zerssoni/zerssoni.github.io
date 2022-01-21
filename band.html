@@ -26,12 +26,20 @@
 {
 			position: absolute;
             top: 20%;
-            left: 0;
-			width: 33%;
+			width: 20%;
             height: 50%;    
             padding-top: 100px;
             display: none;
 			font-family: arial;
+			pointer-events: none;
+}
+
+.infowindow
+{
+	width: 100%;
+	position: relative;
+	display: none;
+	height: 80%;
 }
 
 .details
@@ -102,6 +110,7 @@
 	filter: saturate(0%);
 	filter: contrast(1);
 	overflow: hidden;
+	position: relative;
 }
 
 .bandphoto > div:hover
@@ -140,13 +149,13 @@
 	width: 20%;
   }
   100% {
-	width: 1000%;
+	width: 200%;
   }
 }
 
 @keyframes scale_bandphoto_reverse {
   0% {
-	width: 1000%;
+	width: 200%;
   }
   100% {
 	width: 20%;
@@ -183,10 +192,10 @@
 	<li><a href="index.html">Home</a></li>
 	<li><a href="band.html">Band</a></li>
 	<li><a href="music.html">Listen</a></li>
-	<li><a href="index.html">Gigs</a></li>
+	<li><a href="https://www.facebook.com/evertureband/events">Gigs</a></li>
 	<li><a href="index.html">Story</a></li>
-	<li><a href="index.html">Facebook</a></li>
-	<li><a href="index.html">Instagram</a></li>
+	<li><a href="https://www.facebook.com/evertureband">Facebook</a></li>
+	<li><a href="https://www.instagram.com/evertureband">Instagram</a></li>
 </ul>
 
 <div id="content">
@@ -223,10 +232,10 @@
 </div>
 
 <div id="moreInfo">
-	<div id="masa_info" style="display: none; animation: fade_in 5";>
-		<h1 class="details" style="padding-left: 0%">Matti Hautakangas</h1>
-		<h2 class="details" style="padding-left: 0%">Lead Guitar / Backing Vocals</h2>
-		<p class="details" style="padding-left: 0%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+	<div id="masa_info" class="infowindow">
+		<h1 class="details">Matti Hautakangas</h1>
+		<h2 class="details">Lead Guitar / Backing Vocals</h2>
+		<p class="details">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
@@ -235,53 +244,53 @@
 		</p>
 		<a class="details" style="padding-left: 5%" href="https://www.instagram.com/mattosedo">INSTAGRAM</a>
 	</div>
-	<div id="olli_info" style="display: none";>
-		<h1 class="details" style="padding-left: 10%">Olli Vuoti</h1>
-		<h2 class="details" style="padding-left: 10%">Drums</h2>
-		<p class="details" style="padding-left: 10%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+	<div id="olli_info" class="infowindow">
+		<h1 class="details">Olli Vuoti</h1>
+		<h2 class="details">Drums</h2>
+		<p class="details">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		</p>
-		<a class="details" style="padding-left: 15%" href="https://www.instagram.com/ollikookos">INSTAGRAM</a>
+		<a class="details" style="padding-left: 5%" href="https://www.instagram.com/ollikookos">INSTAGRAM</a>
 	</div>
-	<div id="jere_info" style="display: none";>
-		<h1 class="details" style="padding-left: 20%">Jere Kuokkanen</h1>
-		<h2 class="details" style="padding-left: 20%">Vocals</h2>
-		<p class="details" style="padding-left: 20%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
-		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
-		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
-		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
-		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
-		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
-		</p>
-		<a class="details" style="padding-left: 25%" href="https://www.instagram.com/zerssoni">INSTAGRAM</a>
+	<div id="jere_info" class="infowindow">
+			<h1 class="details">Jere Kuokkanen</h1>
+			<h2 class="details">Vocals</h2>
+			<p class="details">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+			Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+			Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+			Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+			Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+			Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+			</p>
+			<a class="details" style="padding-left: 5%" href="https://www.instagram.com/zerssoni">INSTAGRAM</a>
 	</div>
-	<div id="osku_info" style="display: none";>
-		<h1 class="details" style="padding-left: 30%">Oskari Niskala</h1>
-		<h2 class="details" style="padding-left: 30%">Rhythm Guitar / Backing Vocals</h2>
-		<p class="details" style="padding-left: 30%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+	<div id="osku_info" class="infowindow">
+		<h1 class="details">Oskari Niskala</h1>
+		<h2 class="details">Rhythm Guitar / Backing Vocals</h2>
+		<p class="details">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		</p>
-		<a class="details" style="padding-left: 35%" href="https://www.instagram.com/ozzkun">INSTAGRAM</a>
+		<a class="details" style="padding-left: 10%" href="https://www.instagram.com/ozzkun">INSTAGRAM</a>
 	</div>
-	<div id="miko_info" style="display: none";>
-		<h1 class="details" style="padding-left: 40%">Miko Kylmä</h1>
-		<h2 class="details" style="padding-left: 40%">Bass</h2>
-		<p class="details" style="padding-left: 40%">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
+	<div id="miko_info" class="infowindow">
+		<h1 class="details">Miko Kylmä</h1>
+		<h2 class="details">Bass</h2>
+		<p class="details">Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		Tähän tulee lisätietoja, jotka saattaa mennä useammalle riville.
 		</p>
-		<a class="details" style="padding-left: 45%" href="https://www.instagram.com/mikomalikas">INSTAGRAM</a>
+		<a class="details" style="padding-left: 10%" href="https://www.instagram.com/mikomalikas">INSTAGRAM</a>
 	</div>
 </div>
 
@@ -303,6 +312,7 @@ function toggleVisible()
   		  for(var i=0; i < elems.length; i++)
 		  {
 		  elems[i].style.display = "block";
+
 		  }
   
 
@@ -310,34 +320,53 @@ function toggleVisible()
 
 	if(y.style.width === "20%")
 	{
+		// Nämä sitä varten jos vaihdetaan inforuutua sulkematta toista ensin
+		  for(var i=0; i < elems.length; i++)
+		  {
+			elems[i].style.width = "20%";
+		  }
+		  document.getElementById("masa_info").style.display = "none";
+		  document.getElementById("olli_info").style.display = "none";
+		  document.getElementById("jere_info").style.display = "none";
+		  document.getElementById("osku_info").style.display = "none";
+		  document.getElementById("miko_info").style.display = "none";
+		  
 		y.style.animation = "scale_bandphoto 1s";
 		<!--y.style.animationFillMode = "forwards";-->
-		y.style.width = "1000%";
+		y.style.width = "200%";
 		moreinfo.style.display = "block";
+		
+				  
+
 
 		
 		if(arguments[0] == "masa")
 		{
 			document.getElementById("masa_info").style.display = "block";
+			document.getElementById("masa_info").style.left = "0%";
 		}
 		else if(arguments[0] == "olli")
 		{
 			document.getElementById("olli_info").style.display = "block";
+			document.getElementById("olli_info").style.left = "40%";
 		}
 		else if(arguments[0] == "jere")
 		{
 			document.getElementById("jere_info").style.display = "block";
+			document.getElementById("jere_info").style.left = "80%";
 		}
 		else if(arguments[0] == "osku")
 		{
 			document.getElementById("osku_info").style.display = "block";
+			document.getElementById("osku_info").style.left = "120%";
 		}
 		else if(arguments[0] == "miko")
 		{
 			document.getElementById("miko_info").style.display = "block";
+			document.getElementById("miko_info").style.left = "150%";
 		}
 	}
-	else if (y.style.width === "1000%")
+	else if (y.style.width === "200%")
 	{
 		
 		<!--y.style.animation = "scale_bandphoto 1s";-->
